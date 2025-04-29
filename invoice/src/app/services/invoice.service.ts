@@ -10,7 +10,12 @@ export class InvoiceService {
   private  invoice:Invoice = invoiceData;
   constructor() { }
 
-  getInvoice = ():Invoice => {
-    return this.invoice;
+  getInvoice():Invoice{
+    const total = this.calculateTotal();
+    return {...this.invoice, total};
+  }
+
+  calculateTotal ():number{
+    return this.invoice.items.reduce((acc, item) => acc + (item.price * item.quantity), 0);
   }
 }
