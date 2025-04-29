@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Item } from '../../interfaces/item.interface';
 
 @Component({
@@ -9,4 +9,9 @@ import { Item } from '../../interfaces/item.interface';
 export class ListItemsViewComponent {
 
   @Input() items:Item[] = [];
+  @Output() removeItem = new EventEmitter<number>();
+
+  onRemove = (id:number) => {
+    this.removeItem.emit(id);
+  }
 }

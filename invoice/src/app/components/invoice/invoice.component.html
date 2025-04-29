@@ -15,7 +15,7 @@
           <app-company-view [company]="invoice.company"></app-company-view>
         </div>
       </div>
-        <app-list-items-view [items]="invoice.items"></app-list-items-view>
+        <app-list-items-view [items]="invoice.items" (removeItem)="removeItem($event)"></app-list-items-view>
         <app-total [total]="invoice.total"></app-total>
     </div>
   </div>

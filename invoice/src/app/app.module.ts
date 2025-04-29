@@ -10,6 +10,7 @@ import { CompanyViewComponent } from './components/company-view/company-view.com
 import { ListItemsViewComponent } from './components/list-items-view/list-items-view.component';
 import { RowItemsViewComponent } from './components/row-items-view/row-items-view.component';
 import { TotalComponent } from './components/total/total.component';
+import { FormItemComponent } from './components/form-item/form-item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TotalComponent } from './components/total/total.component';
     CompanyViewComponent,
     ListItemsViewComponent,
     RowItemsViewComponent,
-    TotalComponent
+    TotalComponent,
+    FormItemComponent
   ],
   imports: [
     BrowserModule,
